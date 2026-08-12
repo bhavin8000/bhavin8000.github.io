@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavin Fresh Lemons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">🍋 Bhavin Fresh Lemons</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒 Cart <span id="cartCount">0</span>
+        </button>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <p class="small-title">FRESH • NATURAL • JUICY</p>
+
+        <h1>Fresh Lemons<br>
+            <span>Delivered to You 🍋</span>
+        </h1>
+
+        <p>
+            Fresh and juicy lemons carefully selected for your
+            kitchen, drinks and everyday needs.
+        </p>
+
+        <a href="#products" class="shop-btn">Shop Now</a>
+    </div>
+
+    <div class="hero-lemon">
+        🍋
+    </div>
+</section>
+
+<section id="products" class="products-section">
+    <p class="section-small">OUR PRODUCTS</p>
+    <h2>Choose Your Fresh Lemons</h2>
+
+    <div class="products">
+
+        <div class="product-card">
+            <div class="product-image">🍋</div>
+            <h3>Fresh Lemons</h3>
+            <p class="description">
+                Fresh and juicy lemons for everyday use.
+            </p>
+
+            <div class="price">₹60 <span>/ kg</span></div>
+
+            <button onclick="addToCart('Fresh Lemons', 60)">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">🍋🍋</div>
+            <h3>Premium Lemons</h3>
+            <p class="description">
+                Carefully selected premium quality lemons.
+            </p>
+
+            <div class="price">₹80 <span>/ kg</span></div>
+
+            <button onclick="addToCart('Premium Lemons', 80)">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">🍋🌿</div>
+            <h3>Farm Fresh Lemons</h3>
+            <p class="description">
+                Fresh lemons sourced directly from farms.
+            </p>
+
+            <div class="price">₹100 <span>/ kg</span></div>
+
+            <button onclick="addToCart('Farm Fresh Lemons', 100)">
+                Add to Cart
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div>
+        <p class="section-small">ABOUT US</p>
+        <h2>Freshness You Can Trust</h2>
+
+        <p>
+            Bhavin Fresh Lemons is dedicated to providing fresh,
+            juicy and quality lemons to our customers.
+            We believe that good food starts with fresh ingredients.
+        </p>
+
+        <p>
+            Our goal is simple — provide fresh lemons at a fair price
+            with friendly service.
+        </p>
+    </div>
+
+    <div class="about-box">
+        🍋
+        <h3>Fresh Every Day</h3>
+        <p>Quality lemons for your everyday needs.</p>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <p class="section-small">CONTACT</p>
+    <h2>Order Your Lemons</h2>
+
+    <p>Owner: <strong>Bhavin</strong></p>
+
+    <p>
+        Place your order easily through WhatsApp.
+    </p>
+
+    <button class="whatsapp-btn" onclick="orderOnWhatsApp()">
+        📱 Order on WhatsApp
+    </button>
+</section>
+
+<footer>
+    <h3>🍋 Bhavin Fresh Lemons</h3>
+    <p>Fresh • Natural • Juicy</p>
+    <p>© 2026 Bhavin Fresh Lemons. All Rights Reserved.</p>
+</footer>
+
+<!-- CART POPUP -->
+
+<div id="cartModal" class="cart-modal">
+
+    <div class="cart-content">
+
+        <button class="close" onclick="closeCart()">×</button>
+
+        <h2>🛒 Your Cart</h2>
+
+        <div id="cartItems">
+            <p>Your cart is empty.</p>
+        </div>
+
+        <div class="cart-total">
+            Total: ₹<span id="cartTotal">0</span>
+        </div>
+
+        <button class="checkout-btn" onclick="orderOnWhatsApp()">
+            Order on WhatsApp
+        </button>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
